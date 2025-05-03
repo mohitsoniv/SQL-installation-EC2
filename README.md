@@ -74,15 +74,15 @@ docker exec -it sqlserver2022 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 
 #### microsoft/mssql-server-windows-s2017:
 ##### This specifies the official Microsoft SQL Server image for Windows (S2017). You can find other images for different versions or Linux environments. 
 ## Important Notes:
-#### SQL Server Image:
+#### 1. SQL Server Image:
 ##### Ensure you are using the correct SQL Server image for your needs (Windows or Linux, specific version).
-#### Port Mapping:
+#### 2. Port Mapping:
 ##### The port mapping (e.g., -p 1433:1433) allows you to connect to the SQL Server from outside the container.
-#### Security:
+#### 3. Security:
 ##### The SA_PASSWORD should be kept secure and should not be hardcoded in your scripts or deployment processes. Consider using secrets management tools.
-#### Networking:
+#### 4. Networking:
 ##### You might need to configure network settings on your EC2 instance (e.g., security group rules) to allow traffic on port 1433.
-#### Storage:
+#### 5. Storage:
 ##### You'll likely want to configure persistent storage for your SQL Server data to avoid losing data when the container is stopped or restarted. This can be achieved using Docker volumes or other storage solutions. 
 ## Additional Considerations:
 ##### 1. Before running the container, you can use this command to list available Docker images, including the Microsoft SQL Server image.
